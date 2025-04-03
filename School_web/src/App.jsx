@@ -6,11 +6,14 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>  
-      <Navbar />  {/* ✅ Navbar har page pe dikhna chahiye */}
-      <AboutPage />
-      <Footer />  {/* ✅ Footer har page pe dikhna chahiye */}
-    </Router>
+    <>
+      <Navbar />  {/* Navbar Show Hoga */}
+      <Home /> {/* Home Show Hoga  */}
+     
+
+      <Footer />  {/* Footer Show Hoga */}
+
+    </>
   );
 }
 
