@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from ". ./layout/Layout.jsx";
-import Home from "../pages/Home.jsx";
-import Aboutpage from "../component/Aboutpage.jsx"
-import Index from "./layout/Index.jsx";
+import Layout from "./Components/Layout/Layout";
+import Home from "./pages/Home.jsx";
+import About from "./Components/Aboutpage";
 
 // testing development this is second pushqweihfkjhkajsmamdlkndlsm;l ns
 function App() {
@@ -11,10 +10,9 @@ function App() {
     <Router>
       <Routes>
 
-      <Route path="Index" element={<Index />} />
         <Route path="Layout" element={<Layout />} />
           <Route path="Home" element={<Home />} />
-          <Route path="Aboutpage" element={<Aboutpage />} />
+          <Route path="About" element={<About />} />
          
         
       </Routes>
