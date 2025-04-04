@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"; // ✅ React Router ka Link import karein
+import React from "react"; // ✅ React import karein
 
 const Footer = () => {
   return (

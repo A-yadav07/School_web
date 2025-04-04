@@ -1,19 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./component/Navbar.jsx";  // ✅ Navbar Component
-import Footer from "./component/Footer.jsx"; 
+import Navbar from "../Component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
 
-
-function Layout({ children }) {
+const Layout = () => {
   return (
     <>
-      <Navbar/>
-      <main>
-        {children}
-        <Outlet />
+      <Navbar />
+      <main >
+        <Outlet /> {/* Renders the nested child route like Home */}
       </main>
       <Footer />
     </>
   );
-}
+};
+
 export default Layout;

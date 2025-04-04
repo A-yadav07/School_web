@@ -1,26 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from ". ./layout/Layout.jsx";
-import Home from "../pages/Home.jsx";
-import Aboutpage from "../component/Aboutpage.jsx"
-import Index from "./layout/Index.jsx";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+import Home from "./pages/Home.jsx";
+import Layout from "./layout/Layout.jsx";
 
-// testing development this is second pushqweihfkjhkajsmamdlkndlsm;l ns
 function App() {
-// sdjkhbfjjsdhbdhbv
   return (
-    <Router>
-      <Routes>
-
-      <Route path="Index" element={<Index />} />
-        <Route path="Layout" element={<Layout />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="Aboutpage" element={<Aboutpage />} />
-         
-        
-      </Routes>
-    </Router>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} /> */}
+      </Route>
+    </Routes>
   );
 }
 
 export default App;
-// asdfsf
