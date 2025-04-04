@@ -1,26 +1,12 @@
-
 import React from "react";
-// import ImageSlider from "../ImageSlider/ImageSlider";
-// import Discription from "./Discription";
-// import Gallary from "../Gallary/Gallary";
-// import Ouerservice from "../OverServices/Overservice";
-// import ContactUs from "../ContactUs/ContactUs";
-// import Productpage from "../Product/Productpage";
-import AboutPage from "../Aboutpage/AboutPage";
+import Home from "./pages/Home";
 
 function Index() {
   return (
     <>
-    <AboutPage/>
-    
-      {/* <ImageSlider />
-      <Discription />
-      <Ouerservice />
-      <Gallary />
-      <Productpage />
-      <ContactUs /> */}
+      <Home />
     </>
   );
 }
 
-export default Index;
+export default Index;

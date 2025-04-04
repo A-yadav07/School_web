@@ -1,19 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Component/Navbar.jsx";  // ✅ Navbar Component
-import AboutPage from "./Component/Aboutpage.jsx";  // ✅ About Page Component
-import Footer from "./Component/Footer.jsx";  // ✅ Footer Component
-import "./App.css";
-
+import About from "./Component/Aboutpage.jsx";
+import Layout from "./layout/Layout.jsx";
+import React from "react";
+import Home from "./pages/Home.jsx";
 function App() {
   return (
-    <>
-      <Navbar />  {/* Navbar Show Hoga */}
-      <Home /> {/* Home Show Hoga  */}
-     
-
-      <Footer />  {/* Footer Show Hoga */}
-
-    </>
+    <Router>
+      <Routes >
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
