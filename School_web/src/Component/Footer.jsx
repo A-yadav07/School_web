@@ -3,7 +3,7 @@ import React from "react"; // ✅ React import karein
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16 w-screen max-h-screen" >
+    <footer className="bg-gray-900 text-white py-16 max-h-screen" >
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left">
           <h2 className="text-xl font-bold">Astha</h2>
