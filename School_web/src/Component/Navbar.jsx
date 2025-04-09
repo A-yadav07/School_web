@@ -1,54 +1,82 @@
-import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import { IoChevronDown } from 'react-icons/io5';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Navbar() {
+  const [showLandings, setShowLandings] = useState(false);
+  const [showPages, setShowPages] = useState(false);
 
   return (
-    <nav className="bg-white text-black md:px-20 py-4 left-0 sti  w-full top-0 shadow-lg z-10">
-      <div className="flex justify-between items-center">
+    <nav className="bg-white px-4 py-3 shadow-sm">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-black">MySchool</h1>
+        <div className="flex items-center gap-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M2 12L22 2L12 22L11 13L2 12Z" fill="#005B96" />
+          </svg>
+          <span className="text-2xl font-bold text-[#005B96]">SaasAble</span>
+        </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-12 mr-5 font-medium">
-          <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
-          <li><Link to="/about" className="hover:text-blue-400">About</Link></li>
-          <li><Link to="/projects" className="hover:text-blue-400">Projects</Link></li>
-          <li><Link to="/gallery" className="hover:text-blue-400">Gallery</Link></li>
-          <li><Link to="/classes" className="hover:text-blue-400">Classes</Link></li>
-          <li><Link to="/education" className="hover:text-blue-400">Education</Link></li>
-        </ul>
+        {/* Menu */}
+        <div className="bg-[#f5f8fb] rounded-full px-6 py-2 flex items-center gap-6 shadow-sm relative">
+        <a href="#" className="text-[#005B96] font-medium">Home</a>
 
-        {/* Call Now Button */}
-        <button className="bg-amber-500 text-white px-5 py-2 rounded-md font-medium hidden md:block">
-          Call Now
-        </button>
+          {/* Landings Dropdown */}
+          <div className="relative">
+            <div
+              onClick={() => setShowLandings(!showLandings)}
+              className="flex items-center gap-1 cursor-pointer"
+            >
+              <span>Courses</span>
+              <IoChevronDown className="text-sm" />
+            </div>
+            {showLandings && (
+              <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10">
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Courses 1</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Courses 2</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Courses 3</a>
+              </div>
+            )}
+          </div>
+          <a href="#" className="">Teacher</a>
 
-        {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-2xl">
-          {isOpen ? "✖" : "☰"}
-        </button>
+          <a href="#" className="">Blog</a>
+          <a href="#" className="">Dashboard</a>
+
+          {/* Pages Dropdown */}
+          <div className="relative">
+            <div
+              onClick={() => setShowPages(!showPages)}
+              className="flex items-center gap-1 cursor-pointer"
+            >
+              <span>Pages</span>
+              <IoChevronDown className="text-sm" />
+            </div>
+            {showPages && (
+              <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10">
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100">About</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Contact</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100">FAQ</a>
+              </div>
+            )}
+          </div>
+
+          <a href="#" className="flex items-center gap-1">
+            Docs <FiExternalLink className="text-xs" />
+          </a>
+        </div>
+
+        {/* Right Buttons */}
+        <div className="flex items-center gap-3">
+          <button className="border border-[#005B96] rounded-full p-2">
+            <FaGithub className="text-[#005B96]" />
+          </button>
+          <button className="bg-[#005B96] text-white rounded-full px-5 py-2 font-semibold">
+            Contact
+          </button>
+        </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <ul className="md:hidden mt-4 space-y-3 bg-gray-800 text-white p-4 rounded-lg">
-          <li><Link to="/" className="block hover:text-blue-400">Home</Link></li>
-          <li><Link to="/about" className="block hover:text-blue-400">About</Link></li>
-          <li><Link to="/projects" className="block hover:text-blue-400">Projects</Link></li>
-          <li><Link to="/gallery" className="block hover:text-blue-400">Gallery</Link></li>
-          <li><Link to="/classes" className="block hover:text-blue-400">Classes</Link></li>
-          <li><Link to="/education" className="block hover:text-blue-400">Education</Link></li>
-          <li>
-            <button className="bg-amber-500 text-white px-5 py-2 rounded-md font-medium w-full">
-              Call Now
-            </button>
-          </li>
-        </ul>
-      )}
     </nav>
   );
-};
-
-export default Navbar;
+}

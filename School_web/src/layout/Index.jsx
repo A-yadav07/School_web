@@ -1,15 +1,17 @@
 import React from "react";
-import Home from "./pages/Home";
-import Aboutpage from "../component/Aboutpage";
+import Home from "../pages/Home";
+import ContactPage from "../Component/Contact.jsx";
+import AboutPage from "../Component/Aboutpage.jsx";
+import Faq from "../component/Faq.jsx";
 
 function Index() {
   return (
     <>
    
       <Home />
-       
-      <Aboutpage />
-    
+      <AboutPage />
+      <ContactPage />
+      <Faq />
     </>
   );
 }
