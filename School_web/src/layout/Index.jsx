@@ -6,6 +6,7 @@ import Comperhensive from "../Component/comprohensive.jsx";
 import Posibility from "../Component/Posibility.jsx";
 import Faq from "../component/Faq.jsx";
 import Saasable from "../Component/Saasable.jsx";
+import Advantage from "../Component/Advantage.jsx";
 
 function Index() {
   return (
@@ -18,6 +19,8 @@ function Index() {
       <Posibility/>
       <Faq />
       <Saasable/>
+      <Advantage/>
+      
 
     </>
   );
