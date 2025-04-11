@@ -56,12 +56,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Contact Information */}
-      <div className="bg-gray-800 text-white py-12 text-center">
-        <h2 className="text-3xl font-semibold">Contact Us</h2>
-        <p className="mt-4">123 College Street, City, Country</p>
-        <p>Email: info@college.com | Phone: +123 456 7890</p>
-      </div>
+      
     </div>
   );
 };
