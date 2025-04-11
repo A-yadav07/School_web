@@ -1,83 +1,82 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const faqTabs = [
-  'All',
-  'General',
-  'Pricing & Licenses',
-  'Support & Updates'
-];
-
-const faqItems = {
+const faqData = {
   All: [
     {
-      question: 'Is SaasAble only for SaaS web apps?',
-      answer: 'While SaasAble is designed with SaaS applications in mind, it’s not limited to SaaS products...'
+      question: "Is SaasAble only for SaaS web apps?",
+      answer:
+        "While SaasAble is designed with SaaS applications in mind, it’s not limited to SaaS products...",
     },
     {
-      question: 'What makes SaasAble different from other UI Kits?',
-      answer: 'SaasAble is highly customizable and supports various business models...'
+      question: "What makes SaasAble different from other UI Kits?",
+      answer:
+        "SaasAble is highly customizable and supports various business models...",
     },
     {
-      question: 'Is SaasAble suitable for both developers and designers?',
-      answer: 'Yes, it’s designed with flexibility and customization in mind for both devs and designers.'
+      question: "What is the difference between the Figma and codebase versions?",
+      answer:
+        "Figma provides the design files while codebase gives you the working code components...",
     },
     {
-      question: 'What is the difference between the Figma and codebase versions?',
-      answer: 'Figma provides UI designs while the codebase gives a full-fledged working React app.'
-    },
-    {
-      question: 'How can I download the template after purchase?',
-      answer: 'You can download it directly from your account dashboard after payment.'
+      question: "Do you offer refunds?",
+      answer: "Yes, we offer a 7-day refund policy if you're not satisfied.",
     },
   ],
   General: [
     {
-      question: 'Is SaasAble suitable for both developers and designers?',
-      answer: 'Yes, it’s designed with flexibility and customization in mind for both devs and designers.'
-    }
+      question: "Is SaasAble suitable for both developers and designers?",
+      answer:
+        "Absolutely! It’s designed for easy customization for devs and designers alike.",
+    },
   ],
-  'Pricing & Licenses': [
+  "Pricing & Licenses": [
     {
-      question: 'What’s included in the SaasAble license?',
-      answer: 'All components, free updates, and 6-month support.'
-    }
+      question: "What’s included in the SaasAble license?",
+      answer: "All UI components, updates, and documentation.",
+    },
+    {
+      question: "Can I use SaasAble for multiple projects?",
+      answer:
+        "Yes, depending on the license type. Check our pricing page for details.",
+    },
   ],
-  'Support & Updates': [
+  "Support & Updates": [
     {
-      question: 'Do I get access to future updates?',
-      answer: 'Yes, future updates are free with all licenses.'
-    }
-  ]
+      question: "Do I get access to future updates?",
+      answer: "Yes, you'll receive all future updates for free.",
+    },
+    {
+      question: "Is support included with the template purchase?",
+      answer: "Yes, 6-month free support is included.",
+    },
+  ],
 };
 
 const FAQSection = () => {
-  const [activeTab, setActiveTab] = useState('All');
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [selectedTab, setSelectedTab] = useState("All");
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 py-16">
-      <div className="flex justify-between items-center mb-6">
-        <div>
-          <h2 className="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
-          <p className="text-gray-500">Answers to common queries about SaasAble.</p>
-        </div>
-        <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-5 rounded-full">
-          Get In Touch
-        </button>
-      </div>
+    <div className="w-full max-w-6xl mx-auto px-4 py-10">
+      <h2 className="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
+      <p className="text-gray-600 mb-6">
+        Answers to common queries about SaasAble.
+      </p>
 
-      <div className="flex flex-wrap gap-2 mb-6">
-        {faqTabs.map((tab) => (
+      <div className="flex flex-wrap gap-3 mb-8">
+        {Object.keys(faqData).map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 border rounded-full text-sm font-medium ${
-              activeTab === tab
-                ? 'bg-black text-white'
-                : 'bg-white text-black border-gray-300'
+            className={`px-4 py-2 rounded-full border ${
+              selectedTab === tab ? "bg-black text-white" : "bg-white text-black"
             }`}
             onClick={() => {
-              setActiveTab(tab);
-              setActiveIndex(null);
+              setSelectedTab(tab);
+              setOpenIndex(null);
             }}
           >
             {tab}
@@ -86,27 +85,25 @@ const FAQSection = () => {
       </div>
 
       <div className="space-y-4">
-        {faqItems[activeTab]?.map((item, index) => (
+        {faqData[selectedTab].map((item, index) => (
           <div
             key={index}
-            onClick={() =>
-              setActiveIndex(activeIndex === index ? null : index)
-            }
             className="bg-gray-100 px-6 py-4 rounded-lg cursor-pointer"
+            onClick={() => handleToggle(index)}
           >
             <div className="flex justify-between items-center">
-              <p className="text-sm font-medium text-black">
-                {item.question}
-              </p>
-              <span className="text-xl">{activeIndex === index ? '-' : '+'}</span>
+              <h4 className="font-medium">{item.question}</h4>
+              <span className="text-xl font-bold">
+                {openIndex === index ? "-" : "+"}
+              </span>
             </div>
-            {activeIndex === index && (
-              <p className="text-gray-600 text-sm mt-2">{item.answer}</p>
+            {openIndex === index && (
+              <p className="text-gray-700 mt-2">{item.answer}</p>
             )}
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
