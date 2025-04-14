@@ -66,4 +66,8 @@ const SaasAbleFigmaSection = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SaasAbleFigmaSection;
+=======
+export default SaasAbleFigmaSection;
+>>>>>>> astha
