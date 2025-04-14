@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "../pages/Home";
 import TrustSection from "../component/TrustSection.jsx";
-import AboutPage from "../Component/Aboutpage.jsx";
 import ContactPage from "../Component/Contact.jsx";
 import Comperhensive from "../component/comprohensive.jsx";
 import Posibility from "../component/Posibility.jsx";

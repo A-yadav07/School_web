@@ -1,5 +1,5 @@
-import { FaGithub, FaFacebookF, FaYoutube } from 'react-icons/fa';
-import { SiLinkedin, SiWhatsapp } from 'react-icons/si';
+import { FaFacebookF, FaYoutube, FaInstagram  } from 'react-icons/fa';
+import {  SiWhatsapp  } from 'react-icons/si';
 
 export default function Footer() {
   return (
@@ -73,7 +73,9 @@ export default function Footer() {
           <a href="#" aria-label="WhatsApp" className="text-[#005B96] text-lg"><SiWhatsapp /></a>
           <a href="#" aria-label="Facebook" className="text-[#005B96] text-lg"><FaFacebookF /></a>
           <a href="#" aria-label="YouTube" className="text-[#005B96] text-lg"><FaYoutube /></a>
-          <a href="#" aria-label="GitHub" className="text-[#005B96] text-lg"><FaGithub /></a>
+          <a href="#" aria-label="Instagram" className="text-[#005B96] text-lg"><FaInstagram /></a>
+          {/* <a href="#" aria-label="Teligram" className="text-[#005B96] text-lg"><FaTeligram /></a> */}
+          
         </div>
       </div>
     </footer>

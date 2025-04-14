@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Sparkles, Palette, Rocket, Server, HelpCircle, Link as LinkIcon } from "lucide-react";
+import {
+  Sparkles,
+  Palette,
+  Rocket,
+  Server,
+  HelpCircle,
+  Link as LinkIcon,
+} from "lucide-react";
 import { Button } from "@mui/material";
 
 import Image1 from "../assets/404-Page.jpg";
@@ -81,7 +88,9 @@ const PowerfulAdminInterface = () => {
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
             className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm transition ${
-              activeTab === tab.key ? "bg-gray-200 font-semibold" : "bg-white hover:bg-gray-100"
+              activeTab === tab.key
+                ? "bg-gray-200 font-semibold"
+                : "bg-white hover:bg-gray-100"
             }`}
           >
             {tab.icon}
@@ -90,7 +99,7 @@ const PowerfulAdminInterface = () => {
         ))}
       </div>
 
-      {/* Content Box */}
+      {/* Content */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto">
         <div className="bg-gray-100 rounded-4xl p-4 w-full md:w-1/2 shadow-sm">
           <img src={content.image} alt="Admin UI" className="rounded-2xl" />
@@ -108,35 +117,46 @@ const PowerfulAdminInterface = () => {
             ))}
           </ul>
 
-          {/* ✅ New div for both buttons with bg color */}
-          <div className=" w-full mt-6 p-4 rounded-3xl" style={{ backgroundColor: "#f5f8fb" }}>
-          <div className="mt-6 bg-[#f5f8fb] p-4 rounded-4xl">
-                    <div className="flex gap-4 flex-wrap justify-start">
-                    <Button
-                    variant="outlined"
-                    size="medium"
-                    startIcon={<HelpCircle size={18} />}
-                    sx={{ borderRadius: "9999px" }}
-                  >
-                    Docs
-                  </Button>
+          {/* Buttons */}
+          <div className="w-full mt-6 p-4 rounded-3xl" style={{ backgroundColor: "#f5f8fb" }}>
+            <div className="flex gap-4 flex-wrap justify-start">
+              <Button
+                className="text-white hover:bg-[#27642a]"
+                variant="outlined"
+                size="medium"
+                startIcon={<HelpCircle size={18} />}
+                sx={{
+                  backgroundColor: "#2e7d32",
+                  borderRadius: "9999px",
+                  color: "#fff",
+                  '&:hover': {
+                    backgroundColor: "#27642a",
+                  },
+                }}
+              >
+                Docs
+              </Button>
 
-                  <Button
-                    component="a"
-                    href="/dashboard"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="contained"
-                    size="medium"
-                    startIcon={<LinkIcon size={18} />}
-                    sx={{ borderRadius: "9999px" }}
-                  >
-                    View Dashboard
-                  </Button>
-
-                    </div>
-</div>
-
+              <Button
+                component="a"
+                href="/dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+                size="medium"
+                startIcon={<LinkIcon size={18} />}
+                sx={{
+                  borderRadius: "9999px",
+                  backgroundColor: "#2e7d32",
+                  color: "#fff",
+                  '&:hover': {
+                    backgroundColor: "#27642a",
+                  },
+                }}
+              >
+                View Dashboard
+              </Button>
+            </div>
           </div>
         </div>
       </div>
