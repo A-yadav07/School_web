@@ -60,7 +60,7 @@ const EndlessPossibilities = () => {
         </div>
 
         <div className="mt-10">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium">
+          <button className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-full text-sm font-medium">
             📄 Documentation
           </button>
         </div>

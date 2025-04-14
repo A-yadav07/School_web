@@ -10,32 +10,32 @@ import {
 
 const features = [
   {
-    icon: <Accessibility className="w-6 h-6 text-blue-500" />,
+    icon: <Accessibility className="w-6 h-6 text-blue-900" />,
     title: "WCAG Compliant",
     description: "Ensure accessibility with WCAG compliant design for browsing.",
   },
   {
-    icon: <Globe className="w-6 h-6 text-blue-500" />,
+    icon: <Globe className="w-6 h-6 text-blue-900" />,
     title: "SEO Friendly",
     description: "Boost visibility with SEO-friendly features for better search rankings.",
   },
   {
-    icon: <Layers className="w-6 h-6 text-blue-500" />,
+    icon: <Layers className="w-6 h-6 text-blue-900" />,
     title: "MUI Components",
     description: "Customize Material 3 design MUI components for enhanced aesthetics.",
   },
   {
-    icon: <Rocket className="w-6 h-6 text-blue-500" />,
+    icon: <Rocket className="w-6 h-6 text-blue-900" />,
     title: "High Performance UI",
     description: "Adjust content layout for visual coherence on various screen sizes.",
   },
   {
-    icon: <BookOpen className="w-6 h-6 text-blue-500" />,
+    icon: <BookOpen className="w-6 h-6 text-blue-900" />,
     title: "Detailed Documentation",
     description: "Access comprehensive documentation for easy guidance on platform usage.",
   },
   {
-    icon: <RefreshCcw className="w-6 h-6 text-blue-500" />,
+    icon: <RefreshCcw className="w-6 h-6 text-blue-900" />,
     title: "Regular Updates",
     description: "Receive consistent updates to keep the platform secure and up-to-date with the latest features.",
   },
@@ -61,10 +61,10 @@ const UiKitSection = () => {
       </p>
 
       <div className="mt-6 flex justify-center gap-4">
-        <button className="px-6 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-50 transition">
+        <button className="px-6 py-2 rounded-full border border-blue-900 text-blue-800 hover:bg-blue-50 transition">
           Explore Blocks
         </button>
-        <button className="px-6 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition">
+        <button className="px-6 py-2 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition">
           Contact
         </button>
       </div>

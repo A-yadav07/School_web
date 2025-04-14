@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import { IoChevronDown } from 'react-icons/io5';
 
@@ -70,7 +70,7 @@ export default function Navbar() {
         {/* Right Buttons */}
         <div className="flex items-center gap-3">
           <button className="border border-[#005B96] rounded-full p-2">
-            <FaGithub className="text-[#005B96]" />
+            <FaWhatsapp className="text-[#005B96]" />
           </button>
           <button className="bg-[#005B96] text-white rounded-full px-5 py-2 font-semibold">
             Contact

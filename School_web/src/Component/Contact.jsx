@@ -2,10 +2,10 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-[#f5f8fb] rounded-4xl shadow-sm p-8">
+          <div className="bg-gray-50 rounded-4xl shadow-sm p-8">
             <h2 className="text-2xl font-semibold mb-8">Get in Touch</h2>
             <form className="space-y-6">
               <div>
@@ -174,15 +174,15 @@ const ContactPage = () => {
             <div className="bg-[#f5f8fb] rounded-4xl shadow-sm p-8">
               <h3 className="text-xl font-semibold mb-6">Our Location</h3>
               <div className="rounded-lg overflow-hidden">
-              <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d114591.37848908069!2d82.811545!3d26.164762!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399056a315555555%3A0xed1c31eb99d0808f!2sBaba%20B%20K%20School!5e0!3m2!1sen!2sin!4v1744197813777!5m2!1sen!2sin"
-    width="100%"
-    height="256"
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    className="w-full h-64 border-0"
-  ></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d114591.37848908069!2d82.811545!3d26.164762!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399056a315555555%3A0xed1c31eb99d0808f!2sBaba%20B%20K%20School!5e0!3m2!1sen!2sin!4v1744197813777!5m2!1sen!2sin"
+                  width="100%"
+                  height="256"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-64 border-0"
+                ></iframe>
               </div>
             </div>
           </div>
