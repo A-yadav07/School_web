@@ -1,18 +1,17 @@
 import { FaFacebookF, FaYoutube, FaInstagram  } from 'react-icons/fa';
 import {  SiWhatsapp  } from 'react-icons/si';
-
+import logo from "../assets/logo.jpg";
 export default function Footer() {
   return (
     <footer className="bg-white text-gray-700 px-22 py-15">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Column 1 */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 12L22 2L12 22L11 13L2 12Z" fill="#005B96" />
-            </svg>
-            <span className="text-2xl font-bold text-[#005B96]">SaasAble</span>
-          </div>
+          <div className="flex items-center gap-2">
+                    <img className="w-10 h-10 object-cover rounded-fulls" src={logo} alt="logo.jpg" />
+                    <span className="text-2xl font-bold text-[#005B96]">BaBa B.K</span>
+                  </div>
+         
           <p className="mb-4">v1.1.0</p>
           <p className="mb-4">Get In Touch</p>
           <ul className="space-y-2">

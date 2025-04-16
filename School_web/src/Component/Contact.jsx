@@ -96,7 +96,7 @@ const ContactPage = () => {
               </div>
               <button
                 type="submit"
-                className="!rounded-button w-full bg-custom text-white py-3 px-4 hover:bg-opacity-90 transition-colors"
+                className="!rounded-button w-full bg-custom text-blue-900 py-3 px-4 hover:bg-opacity-90 transition-colors"
               >
                 Send Message
               </button>
