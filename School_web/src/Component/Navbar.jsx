@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
 
           <Link to="/teacher">Teacher</Link>
-          <Link to="/blog">Blog</Link>
+          <Link to="/navgallary">Gallary</Link>
           <Link to="/admin">Dashboard</Link>
 
           {/* Pages Dropdown */}
@@ -56,7 +56,6 @@ export default function Navbar() {
               <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10 text-[#005B96]">
                 <Link to="/about" className="block px-4 py-2 hover:bg-gray-100">About</Link>
                 <Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
-                <Link to="/faq" className="block px-4 py-2 hover:bg-gray-100">FAQ</Link>
               </div>
             )}
           </div>

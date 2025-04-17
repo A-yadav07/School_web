@@ -220,17 +220,17 @@ const AboutPage = () => {
         </div>
       </section>
       {/* Vision & Mission Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-900 to-blue-800">
+      <section className="py-20 bg-gradient-to-b from-white-500 to-blue-200">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
+            <div className="text-black">
               <h2 className="text-4xl font-bold mb-8">Our Vision & Mission</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <i className="fas fa-eye text-3xl text-blue-300 mt-1"></i>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Vision</h3>
-                    <p className="text-blue-100">
+                    <p className="text-black-100">
                       To be a leading institution that nurtures global citizens
                       who are innovative, ethical, and socially responsible.
                     </p>
@@ -240,7 +240,7 @@ const AboutPage = () => {
                   <i className="fas fa-bullseye text-3xl text-blue-300 mt-1"></i>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Mission</h3>
-                    <p className="text-blue-100">
+                    <p className="text-black-100">
                       To provide exceptional education through innovative
                       teaching methods, fostering critical thinking, and
                       promoting lifelong learning.
@@ -296,7 +296,7 @@ const AboutPage = () => {
 </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
             What People Say
@@ -305,16 +305,7 @@ const AboutPage = () => {
             <div className="relative">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className={`transition-opacity duration-500 ${
-                    index === activeTestimonial
-                      ? "opacity-100"
-                      : "opacity-0 absolute inset-0"
-                  }`}
-                >
-                  <div className="bg-white p-8 rounded-lg shadow-lg">
-                    <div className="flex items-center mb-6">
-                      <img
+                  key=
                         src={testimonial.imageUrl}
                         alt={testimonial.name}
                         className="w-16 h-16 rounded-full object-cover mr-4"
@@ -349,17 +340,17 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* CTA Section */}
-      <section className="py-16 bg-blue-800 text-white">
+      <section className="py-16 bg-blue-200 text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Join BaBa B.K?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black-100 mb-8 max-w-2xl mx-auto">
             Become part of an institution that fosters excellence, encourages
             innovation, and shapes the leaders of tomorrow.
           </p>
-          <button className="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition">
-            Apply Now
+          <button className="bg-blue-900 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-800 transition">
+            Contact
           </button>
         </div>
       </section>

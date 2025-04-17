@@ -67,7 +67,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="mt-12 bg-[#f5f8fb] py-1 px-3 rounded-full flex flex-col md:flex-row items-center justify-between">
-        <p className="text-sm">Copyright © 2025 Phoenixcoded</p>
+        <p className="text-sm">Copyright © 2025 Difmo</p>
         <div className="flex items-center gap-3 mt-2 md:mt-6 mb-3">
           <a href="#" aria-label="WhatsApp" className="text-[#005B96] text-lg"><SiWhatsapp /></a>
           <a href="#" aria-label="Facebook" className="text-[#005B96] text-lg"><FaFacebookF /></a>
