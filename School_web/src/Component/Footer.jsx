@@ -34,21 +34,22 @@ export default function Footer() {
         <div className="mr-10">
           <h3 className="text-lg font-semibold mb-4">Company</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-[#005B96]">Why Phoenixcoded?</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Home</a></li>
             <li><a href="#" className="hover:text-[#005B96]">About</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Carear</a></li>
             <li><a href="#" className="hover:text-[#005B96]">Contact Us</a></li>
           </ul>
         </div>
 
         {/* Column 3 */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Support</h3>
+          <h3 className="text-lg font-semibold mb-4">Courses</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-[#005B96]">Pricing</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">FAQ</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">Support</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">License Terms</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">Discord</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Physics</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Chemistry</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Mathmatics</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Biology</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">History</a></li>
           </ul>
         </div>
 
@@ -58,9 +59,9 @@ export default function Footer() {
           <ul className="space-y-2">
             <li><a href="#" className="hover:text-[#005B96]">Freebies</a></li>
             <li><a href="#" className="hover:text-[#005B96]">Documentation</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">Blog</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-[#005B96]">Refund Policy</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Red our Blog</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Over newslatter</a></li>
+            <li><a href="#" className="hover:text-[#005B96]">Free ingury guides</a></li>
           </ul>
         </div>
       </div>

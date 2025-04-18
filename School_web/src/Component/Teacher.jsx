@@ -1,9 +1,9 @@
 // src/components/TeacherPage.jsx
 import React from "react";
-import ab from '../assets/gallaryimage/image1.jpg'
-import se  from '../assets/gallaryimage/imgn1.jpg'
-import na from '../assets/gallaryimage/imgn4.jpg'
-import pa from '../assets/gallaryimage/image6.jpg'
+import ab from '../assets/gallaryimage/teacher.jpeg'
+import se  from '../assets/gallaryimage/teacher2.jpeg'
+import na from '../assets/gallaryimage/teacher3.jpeg'
+import pa from '../assets/gallaryimage/teacher4.jpeg'
 const TeacherPage = () => {
   const courses = ["Science", "English", "Mathmatics"];
   const gallery = [
@@ -19,7 +19,7 @@ const TeacherPage = () => {
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-indigo-900">Mr.Anand Bhadhur yadav</h1>
+          <h1 className="text-4xl font-bold text-indigo-900">Mr. Raj Bhadhur yadav</h1>
           <p className="text-lg text-gray-600 mt-2">A good teacher not only shares knowledge, but also inspires curiosity and confidence.</p>
         </div>
 
@@ -33,7 +33,7 @@ const TeacherPage = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-2">About Me</h2>
             <p>
-            "Mr. R.B Yadav is a passionate and experienced school teacher who has been guiding students from class 1 to 12 with dedication and care. She believes in nurturing young minds with patience, creativity, and strong moral values. Her teaching methods are interactive and student-friendly, making learning a joyful experience. She aims to not just teach subjects, but to inspire curiosity, discipline, and confidence in every child.
+            "Mr. Raj Bhadhur Yadav is a passionate and experienced school teacher who has been guiding students from class 1 to 12 with dedication and care. She believes in nurturing young minds with patience, creativity, and strong moral values. Her teaching methods are interactive and student-friendly, making learning a joyful experience. She aims to not just teach subjects, but to inspire curiosity, discipline, and confidence in every child.
             </p>
           </div>
         </section>

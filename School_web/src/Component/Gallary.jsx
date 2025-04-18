@@ -1,10 +1,11 @@
 import React from "react";
-import school1 from "../assets/gallaryimage/image1.jpg"; 
-import school2 from "../assets/gallaryimage/image2.jpg";  
-import school3 from "../assets/gallaryimage/image3.jpg";
-import school4 from "../assets/gallaryimage/image4.jpg";
-import school5 from "../assets/gallaryimage/image5.jpg";
-import school6 from "../assets/gallaryimage/image6.jpg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import school1 from "../assets/gallaryimage/img1.jpeg"; 
+import school2 from "../assets/gallaryimage/img2.jpeg";  
+import school3 from "../assets/gallaryimage/img3.jpeg";
+import school4 from "../assets/gallaryimage/img4.jpeg";
+import school5 from "../assets/gallaryimage/img5.jpeg";
+import school6 from "../assets/gallaryimage/img6.jpeg";
 
 const blocks = [
   { title: "School", variants: 1, image: school1 },
@@ -52,13 +53,14 @@ const GallaryPage = () => {
       </div>
 
       <p className="text-center text-gray-600 mt-16 max-w-2xl text-base">
-        Explore a wide range of ready-made blocks—from Hero to CTA, Features,
-        and more to speed up your design process.
+      "Har tasveer ek kahaani hai — padhai, masti aur yaadon ki.”
+      “Yahaan har pal mein chhupi hai ek nayi umeed aur ek nayi muskaan.”
       </p>
-
+  <Link to="/navgallary">
       <button className="mt-6 px-6 py-2 border border-blue-900 text-blue-800 rounded-full hover:bg-blue-50 transition font-medium">
-        Explore All Blocks
-      </button>
+        View more
+      </button> 
+      </Link>
     </div>
   );
 };

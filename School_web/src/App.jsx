@@ -13,6 +13,8 @@ import Dashboard from "./adminpage/components/Dashboard.jsx";
 import Index from "./layout/Index.jsx";
 import ContactPage from "./Component/Contact.jsx";
 import AboutPage from "./component/Aboutpage.jsx";
+import BlogPosts from "./Component/Blogpage/Blog_home_page.jsx";
+import AllBlogPosts from "./Component/Blogpage/All_Blog_page.jsx";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route index element={<Index />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPosts />} />
+        <Route path="/allblog" element={<AllBlogPosts />} />
         </Route>
 
         {/* Admin Routes */}
