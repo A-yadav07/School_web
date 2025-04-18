@@ -6,12 +6,13 @@ import FloatingActionButton from "../pages/FloatingActionButton.jsx";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
-const Layout = () => {
+const Layout = ({childern}) => {
   return (
     <>
       <Navbar />
       <main >
-        <Outlet /> {/* Renders the nested child route like Home */}
+        <Outlet /> 
+        {childern}{/* Renders the nested child route like Home */}
       </main>
       <FloatingActionButton />
       <Footer />

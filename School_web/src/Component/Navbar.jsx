@@ -1,30 +1,52 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { FiExternalLink } from 'react-icons/fi';
 import { IoChevronDown } from 'react-icons/io5';
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.jpg";
 
 export default function Navbar() {
   const [showLandings, setShowLandings] = useState(false);
   const [showPages, setShowPages] = useState(false);
+
+  const landingsRef = useRef(null);
+  const pagesRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        landingsRef.current && !landingsRef.current.contains(event.target)
+      ) {
+        setShowLandings(false);
+      }
+
+      if (
+        pagesRef.current && !pagesRef.current.contains(event.target)
+      ) {
+        setShowPages(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-white px-4 py-3 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M2 12L22 2L12 22L11 13L2 12Z" fill="#005B96" />
-          </svg>
-          <span className="text-2xl font-bold text-[#005B96]">SaasAble</span>
+          <img className="w-10 h-10 object-cover rounded-full" src={logo} alt="logo.jpg" />
+          <span className="text-2xl font-bold text-[#005B96]">BaBa B.K</span>
         </div>
 
         {/* Menu */}
-        <div className="bg-[#f5f8fb] rounded-full px-6 py-2 flex items-center gap-6 shadow-sm relative">
-          <Link to="/" className="text-[#005B96] font-medium">Home</Link>
+        <div className="bg-[#f5f8fb] text-[#005B96] rounded-full px-6 py-2 flex items-center gap-6 shadow-sm relative">
+          <Link to="/" className="font-medium">Home</Link>
 
           {/* Courses Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={landingsRef}>
             <div
               onClick={() => setShowLandings(!showLandings)}
               className="flex items-center gap-1 cursor-pointer"
@@ -33,7 +55,7 @@ export default function Navbar() {
               <IoChevronDown className="text-sm" />
             </div>
             {showLandings && (
-              <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10">
+              <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10 text-[#005B96]">
                 <Link to="/courses/1" className="block px-4 py-2 hover:bg-gray-100">Courses 1</Link>
                 <Link to="/courses/2" className="block px-4 py-2 hover:bg-gray-100">Courses 2</Link>
                 <Link to="/courses/3" className="block px-4 py-2 hover:bg-gray-100">Courses 3</Link>
@@ -41,12 +63,12 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link to="/teacher" className="">Teacher</Link>
-          <Link to="/blog" className="">Blog</Link>
-          <Link to="/dashboard" className="">Dashboard</Link>
+          <Link to="/teacher">Teacher</Link>
+          <Link to="/navgallary">Gallary</Link>
+          <Link to="/admin">Dashboard</Link>
 
           {/* Pages Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={pagesRef}>
             <div
               onClick={() => setShowPages(!showPages)}
               className="flex items-center gap-1 cursor-pointer"
@@ -55,17 +77,13 @@ export default function Navbar() {
               <IoChevronDown className="text-sm" />
             </div>
             {showPages && (
-              <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10">
+              <div className="absolute top-10 left-0 bg-white rounded-md shadow-md w-40 py-2 z-10 text-[#005B96]">
                 <Link to="/about" className="block px-4 py-2 hover:bg-gray-100">About</Link>
                 <Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
-                <Link to="/faq" className="block px-4 py-2 hover:bg-gray-100">FAQ</Link>
+                <Link to="/blog" className="block px-4 py-2 hover:bg-gray-100">Blog</Link>
               </div>
             )}
           </div>
-
-          <Link to="/docs" className="flex items-center gap-1">
-            Docs <FiExternalLink className="text-xs" />
-          </Link>
         </div>
 
         {/* Right Buttons */}

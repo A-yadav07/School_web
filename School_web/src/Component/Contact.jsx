@@ -96,7 +96,7 @@ const ContactPage = () => {
               </div>
               <button
                 type="submit"
-                className="!rounded-button w-full bg-custom text-white py-3 px-4 hover:bg-opacity-90 transition-colors"
+                className="!rounded-button w-full bg-custom text-blue-900 py-3 px-4 hover:bg-opacity-90 transition-colors"
               >
                 Send Message
               </button>
@@ -147,8 +147,8 @@ const ContactPage = () => {
                 <div className="flex items-start">
                   <i className="fas fa-clock text-custom w-5"></i>
                   <div className="ml-3">
-                    <p className="text-gray-900">Monday - Friday</p>
-                    <p className="text-gray-600">9:00 AM - 6:00 PM</p>
+                    <p className="text-gray-900">Monday - Saterday</p>
+                    <p className="text-gray-600">10:00 AM - 4:00 PM</p>
                   </div>
                 </div>
               </div>

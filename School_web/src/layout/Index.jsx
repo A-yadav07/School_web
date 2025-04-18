@@ -4,24 +4,25 @@ import TrustSection from "../component/TrustSection.jsx";
 import ContactPage from "../Component/Contact.jsx";
 import Comperhensive from "../component/comprohensive.jsx";
 import Posibility from "../component/Posibility.jsx";
-import Saasable from "../component/Saasable.jsx";
-import PowerfulAdminInterface from "../component/PowerfulAdminInterface.jsx";
 import Faq from "../component/Faq.jsx";
+// import AdminLayout from "../Component/layout/AdminLayout.jxs";
+
 import SaasAbleFigma from "../component/SaasAbleFigma.jsx";
+import SaasAbleBlocksPage from "../Component/Gallary.jsx"
+
+
 function Index() {
   return (
     <>
    
       <Home />
       <TrustSection />
-       {/* <AboutPaglkjhgfdrtfgbhgtfcvbhytrdcv e /> */}
-       <Saasable/>
+       {/* <AboutPag /> */}
+       <SaasAbleBlocksPage/>
       <Comperhensive/>
       <Posibility/>
-
-      <PowerfulAdminInterface/>
-      <SaasAbleFigma/>
-      
+      {/* <PowerfulAdminInterface/> */}
+      {/* <SaasAbleFigma/> */}
       <ContactPage />
       <Faq />
 

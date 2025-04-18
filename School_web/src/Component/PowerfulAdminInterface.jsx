@@ -121,7 +121,7 @@ const PowerfulAdminInterface = () => {
           <div className="w-full mt-6 p-4 rounded-3xl" style={{ backgroundColor: "#f5f8fb" }}>
             <div className="flex gap-4 flex-wrap justify-start">
               <Button
-                className="text-white hover:bg-[#27642a]"
+                className="text-white hover:bg-[#27642az]"
                 variant="outlined"
                 size="medium"
                 startIcon={<HelpCircle size={18} />}
