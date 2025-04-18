@@ -4,8 +4,8 @@ import 'react-slideshow-image/dist/styles.css';
 
 // Import your images
 import banner1 from '../assets/school.jpg';
-import banner2 from '../assets/school1.jpg';
-import banner3 from '../assets/school.jpg';
+import banner2 from '../assets/kids.jpg';
+import banner3 from '../assets/books.jpg';
 
 const slideImages = [
   {

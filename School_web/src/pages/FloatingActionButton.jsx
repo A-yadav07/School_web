@@ -22,7 +22,7 @@ export default function FloatingActionButton() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out animate-bounce"
+          className="bg-blue-900 hover:bg-blue-800 text-white p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out animate-bounce"
           aria-label="Scroll to top"
         >
           <ArrowUp size={24} />

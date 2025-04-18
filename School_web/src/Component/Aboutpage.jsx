@@ -10,11 +10,11 @@ const AboutPage = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <h1 className="relative text-white text-4xl font-bold">About Our College</h1>
-      </div>
+        </div>
 
       {/* Introduction */}
       <div className="max-w-4xl mx-auto py-12 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-4">Welcome to [College Name]</h2>
+        <h2 className="text-3xl font-semibold mb-4">Welcome to [BaBa B.K Higher Secondary School]</h2>
         <p className="text-lg text-gray-700">
           Our college is committed to providing high-quality education and fostering an environment where students can excel in academics, research, and extracurricular activities.
         </p>
@@ -49,8 +49,10 @@ const AboutPage = () => {
                 alt="Faculty"
                 className="mx-auto rounded-full mb-4"
               />
-              <h3 className="text-xl font-medium">Professor {index}</h3>
-              <p className="text-gray-600">Department of XYZ</p>
+              <h3 className="text-xl font-medium">Teacher {index}</h3>
+              <p className="text-gray-600">Department of primary</p>
+              <p classname="text-gray-600">Department of secondary</p>
+              <p classname="text-gray-600">Department of highschool</p>
             </div>
           ))}
         </div>

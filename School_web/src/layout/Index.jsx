@@ -1,26 +1,29 @@
 import React from "react";
 import Home from "../pages/Home";
+import TrustSection from "../component/TrustSection.jsx";
 import ContactPage from "../Component/Contact.jsx";
-import AboutPage from "../Component/Aboutpage.jsx";
-import Comperhensive from "../Component/comprohensive.jsx";
-import Posibility from "../Component/Posibility.jsx";
+import Comperhensive from "../component/comprohensive.jsx";
+import Posibility from "../component/Posibility.jsx";
+import Saasable from "../component/Saasable.jsx";
+import PowerfulAdminInterface from "../component/PowerfulAdminInterface.jsx";
 import Faq from "../component/Faq.jsx";
-import Saasable from "../Component/Saasable.jsx";
-import Advantage from "../Component/Advantage.jsx";
-
+import SaasAbleFigma from "../component/SaasAbleFigma.jsx";
 function Index() {
   return (
     <>
    
       <Home />
-      <AboutPage />
-      <ContactPage />
+      <TrustSection />
+       {/* <AboutPaglkjhgfdrtfgbhgtfcvbhytrdcv e /> */}
+       <Saasable/>
       <Comperhensive/>
       <Posibility/>
-      <Faq />
-      <Saasable/>
-      <Advantage/>
+
+      <PowerfulAdminInterface/>
+      <SaasAbleFigma/>
       
+      <ContactPage />
+      <Faq />
 
     </>
   );

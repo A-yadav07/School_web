@@ -1,6 +1,5 @@
-import { FaGithub, FaFacebookF, FaYoutube, FaDribbble } from 'react-icons/fa';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { SiLinkedin } from 'react-icons/si';
+import { FaFacebookF, FaYoutube, FaInstagram  } from 'react-icons/fa';
+import {  SiWhatsapp  } from 'react-icons/si';
 
 export default function Footer() {
   return (
@@ -17,21 +16,19 @@ export default function Footer() {
           <p className="mb-4">v1.1.0</p>
           <p className="mb-4">Get In Touch</p>
           <ul className="space-y-2">
-  <li className="flex items-center gap-2">
-  <a ></a>
-
-    <span className="text-lg">🧩</span> Baba B.K. Smarak Vidyalaya
-  </li>
-  <li className="flex items-center gap-2">
-    <a href="tel:+916392006343" target="_blank" rel="noopener noreferrer" className="text-lg">📞</a>
-    <span>6392006343</span>
-  </li>
-  <li className="flex items-center gap-2">
-    <a href="mailto:anand@example.com" target="_blank" rel="noopener noreferrer" className="text-lg">✉️</a>
-    <span>anandyadav01782@gmail.com</span>
-  </li>
-</ul>
-
+            <li className="flex items-center gap-2">
+              <span className="text-lg">🧩</span>
+              <span>Baba B.K. Smarak Vidyalaya</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <a href="tel:+916392006343" target="_blank" rel="noopener noreferrer" className="text-lg">📞</a>
+              <span>6392006343</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <a href="mailto:anandyadav01782@gmail.com" target="_blank" rel="noopener noreferrer" className="text-lg">✉️</a>
+              <span>anandyadav01782@gmail.com</span>
+            </li>
+          </ul>
         </div>
 
         {/* Column 2 */}
@@ -73,15 +70,14 @@ export default function Footer() {
       <div className="mt-12 bg-[#f5f8fb] py-1 px-3 rounded-full flex flex-col md:flex-row items-center justify-between">
         <p className="text-sm">Copyright © 2025 Phoenixcoded</p>
         <div className="flex items-center gap-3 mt-2 md:mt-6 mb-3">
-          <a href="#" className="text-[#005B96] text-lg"><SiLinkedin /></a>
-          <a href="#" className="text-[#005B96] text-lg"><FaFacebookF /></a>
-          <a href="#" className="text-[#005B96] text-lg"><FaYoutube /></a>
-          <a href="#" className="text-[#005B96] text-lg"><FaGithub /></a>
-          <a href="#" className="text-[#005B96] text-lg"><FaDribbble /></a>
+          <a href="#" aria-label="WhatsApp" className="text-[#005B96] text-lg"><SiWhatsapp /></a>
+          <a href="#" aria-label="Facebook" className="text-[#005B96] text-lg"><FaFacebookF /></a>
+          <a href="#" aria-label="YouTube" className="text-[#005B96] text-lg"><FaYoutube /></a>
+          <a href="#" aria-label="Instagram" className="text-[#005B96] text-lg"><FaInstagram /></a>
+          {/* <a href="#" aria-label="Teligram" className="text-[#005B96] text-lg"><FaTeligram /></a> */}
+          
         </div>
       </div>
-
-      
     </footer>
   );
 }

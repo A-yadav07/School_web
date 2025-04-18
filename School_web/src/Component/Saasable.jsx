@@ -25,7 +25,7 @@ const SaasAbleBlocksPage = () => {
             <div className="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center border border-gray-300">
               <div className="w-24 h-14 bg-gray-200 rounded" />
             </div>
-            <h2 className="text-blue-600 text-lg font-medium mb-1">
+            <h2 className="text-blue-900 text-lg font-medium mb-1">
               {block.title}
             </h2>
             <p className="text-gray-500 text-sm">
@@ -39,7 +39,7 @@ const SaasAbleBlocksPage = () => {
         Explore a wide range of ready-made blocks—from Hero to CTA, Features, and more to speed up your design process.
       </p>
 
-      <button className="mt-6 px-6 py-2 border border-blue-500 text-blue-600 rounded-full hover:bg-blue-50 transition font-medium">
+      <button className="mt-6 px-6 py-2 border border-blue-900 text-blue-800 rounded-full hover:bg-blue-50 transition font-medium">
         Explore All Blocks
       </button>
     </div>
