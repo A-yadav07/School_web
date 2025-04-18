@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { IoChevronDown } from 'react-icons/io5';
 import { Link } from "react-router-dom";
@@ -8,12 +8,36 @@ export default function Navbar() {
   const [showLandings, setShowLandings] = useState(false);
   const [showPages, setShowPages] = useState(false);
 
+  const landingsRef = useRef(null);
+  const pagesRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        landingsRef.current && !landingsRef.current.contains(event.target)
+      ) {
+        setShowLandings(false);
+      }
+
+      if (
+        pagesRef.current && !pagesRef.current.contains(event.target)
+      ) {
+        setShowPages(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav className="bg-white px-4 py-3 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img className="w-10 h-10 object-cover rounded-fulls" src={logo} alt="logo.jpg" />
+          <img className="w-10 h-10 object-cover rounded-full" src={logo} alt="logo.jpg" />
           <span className="text-2xl font-bold text-[#005B96]">BaBa B.K</span>
         </div>
 
@@ -22,7 +46,7 @@ export default function Navbar() {
           <Link to="/" className="font-medium">Home</Link>
 
           {/* Courses Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={landingsRef}>
             <div
               onClick={() => setShowLandings(!showLandings)}
               className="flex items-center gap-1 cursor-pointer"
@@ -44,7 +68,7 @@ export default function Navbar() {
           <Link to="/admin">Dashboard</Link>
 
           {/* Pages Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={pagesRef}>
             <div
               onClick={() => setShowPages(!showPages)}
               className="flex items-center gap-1 cursor-pointer"
